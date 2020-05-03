@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$('#connect').click(function(){
 		console.log('hai');
 		console.log($('#peerid').val());
-		peerConnection($('#peerid').val());
+		peerConnection2($('#peerid').val());
 	});
 
 	function  peerConnection(peerId){
@@ -33,11 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 *
 		 * The iceServers on this example are public and can be used for your project.
 		 */
-		peer = new Peer(peerId,{
-			host: "peernodetest.herokuapp.com",
-			port: '17969',
-			path: '/mypeer'
-		});
+		peer = new Peer(peerId,'https://peernodetest.herokuapp.com/mypeer');
 
 		// Once the initialization succeeds:
 		// Show the ID that allows other user to connect to your session.
