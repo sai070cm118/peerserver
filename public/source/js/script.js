@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 */
 		peer = new Peer(peerId,{
 			host: "peernodetest.herokuapp.com",
-			port: portNo,
+			port: '17969',
 			path: '/mypeer'
 		});
 
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		// as the peer of the user that requested the connection.
 		// 2.
 		peer.on('connection', function (connection) {
+			console.log(connection);
 			conn = connection;
 			peer_id = connection.peer;
 
