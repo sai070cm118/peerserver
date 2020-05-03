@@ -9,6 +9,7 @@
   "main": "peer-server.js",
   "devDependencies": {},
   "scripts": {
+    "start" : "node peer-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
