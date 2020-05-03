@@ -13,16 +13,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		peerConnection($('#peerid').val());
 	});
 
-	function  peerConnection(peerId){
+	function  peerConnection2(peerId){
 		console.log(peerId);
 		$.get("/port", function(data, status){
 			portNo=data;
+			console.log(data);
 			peerConnection2(data);
 			console.log('hai');
 		});
 	}
 	
-    function peerConnection2(peerId){
+    function peerConnection(peerId){
 	
 		/**
 		 * Important: the host needs to be changed according to your requirements.
@@ -33,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 * The iceServers on this example are public and can be used for your project.
 		 */
 		peer = new Peer(peerId,{
-			host: "peernodetest.herokuapp.com/",
+			host: "peernodetest.herokuapp.com",
+			port: portNo,
 			path: '/mypeer'
 		});
 
