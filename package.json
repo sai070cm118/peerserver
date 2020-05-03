@@ -1,0 +1,17 @@
+{
+  "name": "peer-messenger-peerserver",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1",
+    "peer": "^0.2.10",
+    "peerjs": "^1.2.0"
+  },
+  "main": "peer-server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
