@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		peerConnection($('#peerid').val());
 	});
 
-	function  peerConnection2(peerId){
+	function  peerConnection(peerId){
 		console.log(peerId);
 		$.get("/port", function(data, status){
 			portNo=data;
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 	}
 	
-    function peerConnection(peerId){
+    function peerConnection2(peerId){
 	
 		/**
 		 * Important: the host needs to be changed according to your requirements.
