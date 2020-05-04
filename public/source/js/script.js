@@ -3,7 +3,7 @@ var peer_id;
 var username;
 var conn;
 var peer;
-var portNo;
+var portNo = 9000;
 
 document.addEventListener("DOMContentLoaded", function(event) {
     
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
     function peerConnection2(peerId){
 	
+		console.log(portNo);
 		/**
 		 * Important: the host needs to be changed according to your requirements.
 		 * e.g if you want to access the Peer server from another device, the
@@ -33,7 +34,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 *
 		 * The iceServers on this example are public and can be used for your project.
 		 */
-		peer = new Peer(peerId,'https://peernodetest.herokuapp.com/mypeer');
+		peer = new Peer(peerId,{
+			secure: true, 
+			host: "kingsonspeer.herokuapp.com",
+			port: 443,
+		});
 
 		// Once the initialization succeeds:
 		// Show the ID that allows other user to connect to your session.
