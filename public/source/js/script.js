@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			secure: true, 
 			host: "kingsonspeer.herokuapp.com",
 			port: 443,
+			path: '/mypeer'
 		});
 
 		// Once the initialization succeeds:
