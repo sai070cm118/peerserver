@@ -11,10 +11,12 @@ const app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-	console.log(port);
 	res.sendFile('./public/index.html', { root: __dirname });
 });
 
+app.get('/boradcast', function(req, res) {
+	res.sendFile('./public/Broadcast.html', { root: __dirname });
+});
 
 
 app.get('/port', function(req, res) {
