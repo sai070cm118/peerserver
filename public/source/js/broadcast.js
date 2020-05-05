@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 
 	
+	$('#isBroadCaster').click(function(){
+		isBroadCaster = document.getElementById("isBroadCaster")checked ;
+	}
+	
     function peerConnection(peerId){
 		
 		peer = new Peer(peerId,{
@@ -130,10 +134,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         navigator.getUserMedia({ audio: true, video: true }, callbacks.success , callbacks.error);
     }
 	
-	
-	function changeBroadcast(){
-		isBroadCaster = document.getElementById("isBroadCaster")checked ;
-	}
 	
 	
 }, false);
