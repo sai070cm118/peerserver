@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	
 	$('#isBroadCaster').click(function(){
-		isBroadCaster = document.getElementById("isBroadCaster")checked ;
+		isBroadCaster = $(this).val() ;
 	});
 	
     function peerConnection(peerId){
